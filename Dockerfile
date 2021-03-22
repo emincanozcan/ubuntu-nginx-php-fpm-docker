@@ -23,7 +23,8 @@ RUN apt-get update \
   php8.0-xml php8.0-zip php8.0-bcmath php8.0-soap \
   php8.0-intl php8.0-readline \
   php8.0-msgpack php8.0-igbinary php8.0-ldap \
-  php8.0-redis \ 
+  php8.0-redis \
+  && apt-get install -y nodejs gconf-service libasound2 libatk1.0-0 libc6 libcairo2 libcups2 libdbus-1-3 libexpat1 libfontconfig1 libgbm1 libgcc1 libgconf-2-4 libgdk-pixbuf2.0-0 libglib2.0-0 libgtk-3-0 libnspr4 libpango-1.0-0 libpangocairo-1.0-0 libstdc++6 libx11-6 libx11-xcb1 libxcb1 libxcomposite1 libxcursor1 libxdamage1 libxext6 libxfixes3 libxi6 libxrandr2 libxrender1 libxss1 libxtst6 ca-certificates fonts-liberation libappindicator1 libnss3 lsb-release xdg-utils wget libgbm-dev \
   && php -r "readfile('http://getcomposer.org/installer');" | php -- --install-dir=/usr/bin/ --filename=composer \
   && apt-get -y autoremove \
   && apt-get clean \
